@@ -1,0 +1,40 @@
+{
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "react",
+    "unused-imports",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": ["warn", { "singleQuote": true,
+      "printWidth": 120
+    }],
+    "jsx-a11y/alt-text": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "no-use-before-define": "error",
+    "unused-imports/no-unused-imports-ts": "warn",
+    "unused-imports/no-unused-vars-ts": [
+      "warn",
+      { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }
+    ],
+    // "sort-imports": "warn",
+    // "sort-keys": "warn",
+    "@typescript-eslint/ban-ts-comment": "warn"
+  },
+  "ignorePatterns": [
+    "next-env.d.ts"
+  ]
+}
